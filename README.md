@@ -13,6 +13,7 @@ To install DataQualityChecker, clone the repository and install dependencies:
 
 ```bash
 pip install -r requirements.txt
+```
 
 ## Usage
 Here’s how to use DataQualityChecker:
@@ -23,6 +24,7 @@ Here’s how to use DataQualityChecker:
    from pyspark.sql import SparkSession
 
    spark = SparkSession.builder.appName("DataQualityCheckerExample").getOrCreate()
+   ```
 
 2. Define DataFrame and Expected Schema:
    from pyspark.sql.types import StructType, StructField, IntegerType, StringType
@@ -43,11 +45,13 @@ Here’s how to use DataQualityChecker:
       "age": IntegerType(),
       "gender": StringType()
     }
+   ```
 3. Initialize DataQualityChecker:
    ```bash
    from data_quality_checker import DataQualityChecker
 
    dq_checker = DataQualityChecker(df, expected_schema)
+   ```
 
 4. Run Checks:
    ```bash
@@ -60,6 +64,7 @@ Here’s how to use DataQualityChecker:
     
    results_df = dq_checker.run_checks()
    results_df.show(truncate=False)
+   ```
 
 ## Example Output
 
@@ -79,6 +84,7 @@ The output will be a DataFrame containing a summary of each check, with details 
 Run unit tests with unittest to verify the integrity of the DataQualityChecker:
 ```bash
 python -m unittest discover
+```
 
 
 
