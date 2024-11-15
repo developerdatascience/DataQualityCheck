@@ -107,7 +107,10 @@ jobs:
     environment:
       name: release
     permissions:
+      # In order to use Trusted Publisher
       id-token: write
+      contents: read
+
     steps:
       - name: Download artifacts
         uses: actions/download-artifact@v3
@@ -117,6 +120,19 @@ jobs:
 
       - name: Publish distribution to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+          cache: "poetry"
+
+      - name: Publish the package with poetry
+        run: |
+          poetry publish -u __token__ -p '${{ secrets.PYPI_API_TOKEN }}'
 
   github_release:
     name: Create GitHub Release
