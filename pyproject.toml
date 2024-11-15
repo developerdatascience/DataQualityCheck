@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "qualipy"
+name = "DataQualityCheck"
 version = "0.1.0"
-description = "QualiPy is an intuitive library focused on data quality assessment, offering automated checks for completeness, consistency, and accuracy to guarantee high standards across your data flows."
+description = "DataQualityCheck is an intuitive library focused on data quality assessment, offering automated checks for completeness, consistency, and accuracy to guarantee high standards across your data flows."
 authors = ["developerdatascience <harendra263@gmail.com>"]
 license = "MIT"
 readme = "README.md"
