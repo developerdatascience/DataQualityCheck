@@ -11,6 +11,7 @@ DataQualityChecker is a Python package for performing data quality checks on PyS
 ## Installation
 To install DataQualityChecker, clone the repository and install dependencies:
 
+```bash
 pip install -r requirements.txt
 
 ## Usage
@@ -18,6 +19,7 @@ Here’s how to use DataQualityChecker:
 
 1. Initialize SparkSession:
 
+   ```bash
    from pyspark.sql import SparkSession
 
    spark = SparkSession.builder.appName("DataQualityCheckerExample").getOrCreate()
@@ -25,6 +27,7 @@ Here’s how to use DataQualityChecker:
 2. Define DataFrame and Expected Schema:
    from pyspark.sql.types import StructType, StructField, IntegerType, StringType
 
+   ```bash
    data = [(1, "John", 25, "M"), (2, "Jane", None, "F"), (3, "Alice", 35, None)]
    schema = StructType([
       StructField("id", IntegerType(), True),
@@ -41,11 +44,13 @@ Here’s how to use DataQualityChecker:
       "gender": StringType()
     }
 3. Initialize DataQualityChecker:
+   ```bash
    from data_quality_checker import DataQualityChecker
 
    dq_checker = DataQualityChecker(df, expected_schema)
 
 4. Run Checks:
+   ```bash
    dq_checker.check_null_values()
    dq_checker.check_uniqueness("id")
    dq_checker.check_value_range("age", 20, 40)
@@ -72,7 +77,7 @@ The output will be a DataFrame containing a summary of each check, with details 
 
 ## Running Tests
 Run unit tests with unittest to verify the integrity of the DataQualityChecker:
-
+```bash
 python -m unittest discover
 
 
