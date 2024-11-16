@@ -49,9 +49,9 @@ Here’s how to use DataQualityChecker:
    ```
 3. Initialize DataQualityChecker:
    ```bash
-   from data_quality_checker import DataQualityChecker
+   from verify_data.verify import VerifyData
 
-   dq_checker = DataQualityChecker(df, expected_schema)
+   dq_checker = VerifyData(df, expected_schema)
    ```
 
 4. Run Checks:
