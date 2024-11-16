@@ -9,7 +9,7 @@ from dataclasses import dataclass, field
 spark = SparkSession.builder.appName("DataQualityCheck").getOrCreate()
 
 @dataclass
-class DataQualityCheck:
+class VerifyData:
     """
     A class to perform data quality checks on a PySpark DataFrame.
 
@@ -102,4 +102,4 @@ class DataQualityCheck:
 
 
 if __name__ == "__main__":
-    DataQualityCheck()
+    VerifyData()
