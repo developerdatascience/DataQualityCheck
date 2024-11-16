@@ -78,15 +78,9 @@ jobs:
         with:
           python-version: "3.12"
       
-      - name: Cache Poetry dependencies
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.cache/pypoetry
-            ~/.cache/pip
-          key: ${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-poetry-
+      - name: Clear Poetry cache
+        run: poetry cache clear pypoetry --all
+
 
       - name: Install Poetry
         run: |
