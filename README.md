@@ -1,6 +1,6 @@
-# DataQualityCheck
+# VerifyData
 
-DataQualityChecker is a Python package for performing data quality checks on PySpark DataFrames. It provides a comprehensive set of checks to validate the integrity, consistency, and accuracy of data before processing, ensuring that data meets the required standards. The package is ideal for ETL workflows, data pipelines, and any scenario where high-quality data is essential.
+VerifyData is a Python package for performing data quality checks on PySpark DataFrames. It provides a comprehensive set of checks to validate the integrity, consistency, and accuracy of data before processing, ensuring that data meets the required standards. The package is ideal for ETL workflows, data pipelines, and any scenario where high-quality data is essential.
 
 ### Features
 * Null Value Check: Ensures that specified columns do not contain null values.
