@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "DataQualityChecks"
+name = "DataQualityCheck"
 version = "0.0.1"
-description = "DataQualityChecks is an intuitive library focused on data quality assessment, offering automated checks for completeness, consistency, and accuracy to guarantee high standards across your data flows."
+description = "DataQualityCheck is an intuitive library focused on data quality assessment, offering automated checks for completeness, consistency, and accuracy to guarantee high standards across your data flows."
 authors = ["developerdatascience <harendra263@gmail.com>"]
 packages = [
-    { include = "data_quality_checks", from = "src" }
+    { include = "data_quality_check", from = "src" }
 ]
 license = "MIT"
 readme = "README.md"

@@ -1,7 +1,7 @@
 import unittest
 from pyspark.sql import SparkSession
 from pyspark.sql.types import StructType, StructField, IntegerType, StringType
-from src.data_quality_checks import dataqualitychecks
+from data_quality_check import dataqualitycheck
 
 class TestDataQualityCheck(unittest.TestCase):
     
@@ -39,7 +39,7 @@ class TestDataQualityCheck(unittest.TestCase):
         }
         
         # Initialize DataQualityChecker
-        self.dq_checker = dataqualitychecks.DataQualityCheck(self.df, self.expected_schema)
+        self.dq_checker = dataqualitycheck.DataQualityCheck(self.df, self.expected_schema)
 
     def test_check_null_values(self):
         self.dq_checker.check_null_values()
