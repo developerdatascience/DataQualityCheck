@@ -14,10 +14,20 @@ class MultiDatasetComparator:
     
 
     def compare_schemas(self) -> Dict[str, List[str]]:
+        """
+        Compare the schemas of all datasets.
+        Returns:
+            dict: A dictionary where the key is the dataset name, and the value is the schema.
+        """
         pass
 
 
     def find_common_columns(self) -> List[str]:
+        """
+        Find columns common to all datasets.
+        Returns:
+            list: List of common columns.
+        """
         pass
 
     def compare_row_counts(self) -> Dict[str, int]:
